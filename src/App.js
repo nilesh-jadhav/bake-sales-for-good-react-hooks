@@ -9,7 +9,7 @@ function App() {
         <h1>Bake Sales For Good</h1>
       </header>
       <section>
-        content
+        content !
       </section>
     </div>
   );
