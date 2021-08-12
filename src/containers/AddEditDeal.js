@@ -1,13 +1,14 @@
 import { useParams, useHistory } from "react-router-dom";
+import '../styles/AddEditDeal.scss';
 
 function AddEditDeal() {
     let { id } = useParams();
     let history = useHistory();
     
     return(
-        <div className="App-container">
+        <div className="App-container Add-edit">
             { (id && id !== '0') ?
-            <div>
+            <div className="Add-edit-container">
                 <h1>Edit Deal</h1>
                 <h6>ID: {id}</h6>
                 <div>
@@ -22,7 +23,7 @@ function AddEditDeal() {
                 <button className="Button-primary" onClick={() => history.push('/')}>Update</button> 
             </div>
             :
-            <div>
+            <div className="Add-edit-container">
                 <h1>Add a new Deal</h1>
                 <div>
                     Add UI for Adding new Deal

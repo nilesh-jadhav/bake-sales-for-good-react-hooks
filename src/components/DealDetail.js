@@ -7,6 +7,7 @@ function DealDetail(props) {
     let history = useHistory();
 
     return(
+      Object.keys(dealDetail).length ?
         <div className="Detail-container">
           <div className="Detail-header">
             <h1 className="Detail-title">{dealDetail.title || ''}</h1>
@@ -32,6 +33,8 @@ function DealDetail(props) {
             <UserAvtar user={dealDetail.user} />
           }
         </div>
+        :
+        <div className="Detail-container"></div>
     )
 }
 

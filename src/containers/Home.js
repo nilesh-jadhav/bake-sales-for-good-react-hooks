@@ -51,10 +51,8 @@ function Home() {
         fetch(`https://bakesaleforgood.com/api/deals?searchTerm=${searchText}`)
         .then(response => response.json())
         .then(data => {
-            if (data && data.length) {
             console.log('search --->', data);
             updateDeals(data);
-            }
         });
     };
 
