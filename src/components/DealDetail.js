@@ -1,13 +1,16 @@
 import UserAvtar from "./UserAvtar";
 import '../styles/DealDetail.scss';
+import { useHistory } from "react-router-dom";
 
 function DealDetail(props) {
     const { dealDetail } = props;
+    let history = useHistory();
+
     return(
         <div className="Detail-container">
           <div className="Detail-header">
             <h1 className="Detail-title">{dealDetail.title || ''}</h1>
-            <button className="Button-primary Detail-edit" onClick={() => null}>Edit</button>
+            <button className="Button-primary Detail-edit" onClick={() => history.push(`/add-edit/${dealDetail.key}`)}>Edit</button>
           </div>
           <div className="Detail-sub-container-spread">
             <div>

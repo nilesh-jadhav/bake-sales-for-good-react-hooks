@@ -25,6 +25,13 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.App-container {
+  display: flex;
+  flex: 9.7;
+  flex-direction: row;
+  padding: 10px;
+  max-height: 650px;
+}
 .Small-text {
   font-size: 12px;
   flex: 1;
