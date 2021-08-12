@@ -1,0 +1,21 @@
+.List-item {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    &.selected {
+      background-color: rgb(230, 238, 238);
+    }
+  }
+  .List-item:hover{
+    background-color: rgb(230, 238, 238);
+  }
+  .List-item-content {
+    padding-left: 10px;
+    width: 100%;
+  }
+  .List-item-sub-content {
+    display: flex;
+    flex-direction: row;
+  }
+  

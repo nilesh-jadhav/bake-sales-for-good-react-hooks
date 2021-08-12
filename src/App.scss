@@ -1,11 +1,12 @@
 .App {
-  text-align: center;
   display: flex;
+  flex: 1;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 60px;
   pointer-events: none;
 }
 
@@ -17,12 +18,22 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 10vh;
   display: flex;
+  flex: 0.3;
   flex-direction: row;
   align-items: center;
-  // justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.Small-text {
+  font-size: 12px;
+  flex: 1;
+}
+.Button-primary {
+  color: #fff;
+  background-color: rgb(6, 6, 228);
+  border: 1px solid rgb(6, 6, 228);
+  border-radius: 5%;
+  margin: 0 10px;
+  height: 30px;
+}
