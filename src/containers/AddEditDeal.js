@@ -1,16 +1,31 @@
+import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import '../styles/AddEditDeal.scss';
 
 function AddEditDeal() {
+    const [dealDetail, updateDealDetail] = useState({});
     let { id } = useParams();
     let history = useHistory();
+
+    useEffect(() => {
+        if(id && id !== '0') {
+            // fetching data using id/key for updating 
+            fetch(`https://bakesaleforgood.com/api/deals/${id}`)
+            .then(response => response.json())
+            .then(data => {
+            if (data) {
+                updateDealDetail(data);
+            }
+        });
+        }
+    }, [id]);
     
     return(
         <div className="App-container Add-edit">
             { (id && id !== '0') ?
             <div className="Add-edit-container">
                 <h1>Edit Deal</h1>
-                <h6>ID: {id}</h6>
+                <h6>Key: {dealDetail.key || ''}</h6>
                 <div>
                     Add UI for edit Deal
                 </div>
