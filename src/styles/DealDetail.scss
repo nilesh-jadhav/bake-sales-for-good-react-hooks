@@ -1,0 +1,29 @@
+.Detail-container {
+    display: flex;
+    flex-direction: column;
+    flex: 6.5;
+    padding: 20px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+  
+    .Detail-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .Detail-media {
+        align-self: center;
+        width: 60%;
+        height: 50%;
+        padding: 10px 0;
+    }
+    .Detail-sub-container-spread {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .Detail-sub-container {
+        display: flex;
+        flex-direction: row;
+    }
+}
